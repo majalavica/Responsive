@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoons</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    box-sizing: border-box;
+
+}
+header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+}
+h1{
+    animation-name: show-up;
+    transform: translate(1px,1px);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    margin: 0 auto;
+    font-size: 60px;
+    text-shadow: 4px 4px 10px rgba(10, 16, 107, 0.637);
+    color: rgb(58, 135, 185);
+    font-family: 'Oi', cursive;
+}
+@keyframes show-up {
+    0%{
+        transform:translateY(-500px); 
+    }
+    100%{
+        transform: translateY(10px);
+    }
+    
+}
+/*End short Animation*/
+
+#container{
+    padding: 100px 0;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 50px;
+}
+
+.box{
+    position: relative;
+    height: 140px;
+    border-radius: 15px;
+    background-image: url("slike/transparent.png");
+    background-repeat: no-repeat;
+    background-color: rgb(58, 135, 185);
+    background-size: contain;
+    background-position:center;
+    }
+
+.box::after {
+    width: 100%;
+    height: 20%;
+    content: "Hover me";
+    border-radius: 0px 0px 15px 15px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: rgb(221, 220, 220);
+    padding: 5px;
+}
+.box:hover{
+    box-shadow: 10px 10px 20px grey;
+    
+}
+.box:nth-child(2):hover{
+    background-image: url("slike/zootopia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box:nth-child(4):hover{
+    background-image: url("slike/mulan.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.box:nth-child(6):hover{
+    background-image: url("slike/tangled.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top center;
+}
+.box:nth-child(8):hover{
+    background-image: url("slike/frozen.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.box:nth-child(10):hover{
+    background-image: url("slike/lion.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom center;
+}
+.box:nth-last-child(2):hover{
+    background-image: url("slike/moana.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.box:nth-last-child(4):hover{
+    background-image: url("slike/brave.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box:nth-last-child(6):hover{
+    background-image: url("slike/wall-e.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.box:nth-last-child(8):hover{
+    background-image: url("slike/rat.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+.box:nth-last-child(10):hover{
+    background-image: url("slike/garfield.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/*End hover images*/
+
+@media screen and (max-width: 1024px) {
+    #grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    #grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    p {
+        font-size: 0.7em;
+    }
+}
+/*End responsive galery*/
+
+footer{
+    padding: 30px;
+}
+/*End footer*/
+</style>
+<body>
+    <header>
+            <h1>Cartoons</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, molestiae? Nobis alias commodi inventore id quia debitis molestias reprehenderit aliquam nam rem, delectus modi optio minima quaerat neque hic! Libero ut et suscipit quisquam quaerat minus consequatur. ligendi consequatur consectetur inventore.</p>
+    </header>
+
+    <div id="container">
+        <div id="grid">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div> 
+    <footer>
+        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error hic, delectus quam dolor ipsa
+            aut cum quia beatae alias recusandae explicabo dignissimos vitae id aliquid illo corrupti, minus itaque
+            natus? Labore provident quidem ea, illo tempore harum ratione, dolorum minus voluptas, nostrum nesciunt
+            aperiam atque corrupti eveniet saepe iure cum? Cupiditate commodi doloremque saepe eum quia, similique
+            temporibus sunt ut cumque dolorum quidem, debitis quae fugiat ea ex eius vero dignissimos consectetur
+            blanditiis aspernatur mollitia, earum magni? Odit voluptatibus esse laboriosam illum corporis magnam
+            quibusdam, commodi, dignissimos natus fuga iste molestias. Maxime cumque dolore aliquam impedit eius
+            eligendi, dolores consectetur?
+        </p>
+
+    </footer> 
+
+</body>
+</html>
